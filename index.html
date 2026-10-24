@@ -1,230 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olando Redmutta | IT Portfolio</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #0b3d91;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h2 {
-            font-size: 24px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #0b3d91, #1976d2);
-            color: white;
-            min-height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            padding: 50px 8%;
-        }
-
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .hero h3 {
-            font-size: 24px;
-            font-weight: normal;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-        }
-
-        .profile {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid white;
-        }
-
-        section {
-            padding: 60px 8%;
-        }
-
-        section h2 {
-            color: #0b3d91;
-            margin-bottom: 25px;
-            font-size: 32px;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .skill {
-            background: white;
-            padding: 25px;
-            width: 250px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-        }
-
-        .skill h3 {
-            color: #1976d2;
-            margin-bottom: 10px;
-        }
-
-        .contact {
-            background: #eaf2ff;
-        }
-
-        footer {
-            background: #0b3d91;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media (max-width: 700px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            nav {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Olando Redmutta's Information Technology portfolio, training, interests and contact details.">
+  <title>Olando Redmutta | IT Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background: #f4f7fb; color: #222; line-height: 1.7; }
+    header { background: #0b3d91; color: white; padding: 18px 8%; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    header h2 { font-size: 22px; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .hero { background: linear-gradient(135deg, #0b3d91, #1976d2); color: white; min-height: 480px; display: flex; justify-content: center; align-items: center; gap: 52px; padding: 55px 8%; }
+    .hero-text { max-width: 650px; }
+    .hero h1 { font-size: clamp(34px, 5vw, 48px); line-height: 1.2; margin-bottom: 14px; }
+    .hero h3 { font-size: 23px; font-weight: normal; margin-bottom: 18px; }
+    .hero p { font-size: 17px; }
+    .profile { width: 230px; height: 230px; border-radius: 50%; object-fit: cover; object-position: center 30%; border: 6px solid white; flex-shrink: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .btn { display: inline-block; border-radius: 7px; padding: 11px 18px; text-decoration: none; font-weight: bold; border: 2px solid white; }
+    .btn-primary { background: white; color: #0b3d91; }
+    .btn-outline { color: white; }
+    .btn:hover { transform: translateY(-1px); }
+    section { padding: 55px 8%; }
+    section h2 { color: #0b3d91; margin-bottom: 20px; font-size: 30px; }
+    .intro { max-width: 900px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 23px; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.08); }
+    .card h3 { color: #1976d2; margin-bottom: 9px; }
+    .tag { display: inline-block; background: #eaf2ff; color: #0b3d91; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: bold; margin-bottom: 10px; }
+    .contact { background: #eaf2ff; }
+    .contact a { color: #0b3d91; }
+    footer { background: #0b3d91; color: white; text-align: center; padding: 22px; }
+    @media (max-width: 760px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .hero { flex-direction: column-reverse; text-align: center; gap: 28px; }
+      .profile { width: 200px; height: 200px; }
+      .actions { justify-content: center; }
+      nav { gap: 12px; }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h2>Olando Redmutta</h2>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills & Interests</a>
+      <a href="#training">Training</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <header>
-        <h2>Olando Redmutta</h2>
-
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
+  <main>
     <section class="hero">
-        <div class="hero-text">
-            <h1>Hello, I'm Olando Redmutta</h1>
-            <h3>BSc Information Technology Student</h3>
-
-            <p>
-                I'm a second-year IT student at Kirinyaga University
-                with a strong interest in networking, programming and
-                web development. My goal is to become an IT expert
-                and build useful technology solutions.
-            </p>
+      <div class="hero-text">
+        <h1>Hello, I'm Olando Redmutta</h1>
+        <h3>BSc Information Technology Student</h3>
+        <p>I'm a second-year Information Technology student at Kirinyaga University, building my skills in data analysis, computer networking, programming and web development. I enjoy learning how technology and data can be used to understand problems and develop useful solutions.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="Olando_Redmutta_CV.docx" download>Download My CV</a>
+          <a class="btn btn-outline" href="#contact">Contact Me</a>
         </div>
-
-        <img src="profile.jpg" alt="Olando Redmutta" class="profile">
+      </div>
+      <img src="profile.jpg" alt="Olando Redmutta wearing a blue blazer" class="profile">
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
-
-        <p>
-            I am an enthusiastic Information Technology student
-            interested in developing my skills in computer networking,
-            programming and web development. I am continuously learning
-            and looking forward to gaining practical experience in the
-            IT industry.
-        </p>
+      <h2>About Me</h2>
+      <p class="intro">I am an enthusiastic Information Technology student at Kirinyaga University. My main career interest is data analysis, with additional interests in computer networking, programming and web development. I am continuing to build practical skills and look forward to applying what I learn to real-world challenges.</p>
     </section>
 
     <section id="skills">
-        <h2>My Interests & Skills</h2>
+      <h2>Skills & Career Interests</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Data Analysis</h3>
+          <p>Developing skills in data entry, descriptive statistics, frequency tables, graphs, correlation, chi-square testing, statistical modelling and interpretation.</p>
+        </article>
+        <article class="card">
+          <h3>Computer Networking</h3>
+          <p>Learning TCP/IP, subnetting, network configuration, network fundamentals and troubleshooting.</p>
+        </article>
+        <article class="card">
+          <h3>Programming</h3>
+          <p>Building programming knowledge and learning how software solutions are designed and developed.</p>
+        </article>
+        <article class="card">
+          <h3>Web Development</h3>
+          <p>Practising HTML and CSS to build and improve useful, responsive websites.</p>
+        </article>
+        <article class="card">
+          <h3>IT Support</h3>
+          <p>Interested in computer systems, troubleshooting and helping users solve technology problems.</p>
+        </article>
+      </div>
+    </section>
 
-        <div class="skills">
+    <section id="training">
+      <h2>Professional Training</h2>
+      <div class="card">
+        <span class="tag">In Progress · Certification Pending</span>
+        <h3>Data Analysis Short Course</h3>
+        <p><strong>KESAP Research Center</strong></p>
+        <p>Training in data entry, statistical analysis, statistical modelling and data interpretation using Microsoft Excel, SPSS and Stata.</p>
+        <p><strong>Key training areas:</strong></p>
+        <ul>
+          <li>Primary and secondary data entry</li>
+          <li>Descriptive statistics, including mean, standard deviation and frequency tables</li>
+          <li>Creating graphs and presenting data clearly</li>
+          <li>Relationship testing using correlation and chi-square</li>
+          <li>Model estimation and interpretation</li>
+          <li>Diagnostic tests for autocorrelation, multicollinearity and heteroscedasticity</li>
+          <li>Interpreting results and drawing meaningful conclusions</li>
+        </ul>
+        <p><em>Assessment and certificate pending.</em></p>
+      </div>
+    </section>
 
-            <div class="skill">
-                <h3>Networking</h3>
-                <p>
-                    Learning computer networks, TCP/IP, subnetting,
-                    network configuration and troubleshooting.
-                </p>
-            </div>
-
-            <div class="skill">
-                <h3>Programming</h3>
-                <p>
-                    Developing programming skills and learning how
-                    software solutions are designed and built.
-                </p>
-            </div>
-
-            <div class="skill">
-                <h3>Web Development</h3>
-                <p>
-                    Learning HTML, CSS and modern web development
-                    techniques to create useful websites.
-                </p>
-            </div>
-
-            <div class="skill">
-                <h3>IT Support</h3>
-                <p>
-                    Interested in computer systems, troubleshooting
-                    and helping users solve technology problems.
-                </p>
-            </div>
-
-        </div>
+    <section id="education">
+      <h2>Education & Leadership</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Kirinyaga University</h3>
+          <p><strong>BSc Information Technology</strong></p>
+          <p>Second-year student · Currently studying</p>
+        </article>
+        <article class="card">
+          <h3>Leadership Experience</h3>
+          <p>Served as a class prefect in primary school and as an editor in high school.</p>
+        </article>
+        <article class="card">
+          <h3>Activities</h3>
+          <p>Played netball in school, developing teamwork and cooperation.</p>
+        </article>
+      </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2>Contact Me</h2>
-
-        <p>
-            Email:
-            <strong>olandoredmutta@gmail.com</strong>
-        </p>
+      <h2>Contact Me</h2>
+      <p>Email: <strong><a href="mailto:olandoredmutta@gmail.com">olandoredmutta@gmail.com</a></strong></p>
+      <p>For my background and experience, you can also view or download my CV using the button above.</p>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2026 Olando Redmutta | IT Portfolio</p>
-    </footer>
-
+  <footer>
+    <p>© 2026 Olando Redmutta | IT Portfolio</p>
+  </footer>
 </body>
 </html>
