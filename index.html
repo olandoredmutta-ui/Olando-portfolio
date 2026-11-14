@@ -4,571 +4,186 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Olando Redmutta's Information Technology portfolio, training, interests and contact details.">
-  <meta name="theme-color" content="#171316">
   <title>Olando Redmutta | IT Portfolio</title>
-
   <style>
-    :root {
-      --burgundy: #4A1028;
-      --dark: #171316;
-      --rose: #B76E79;
-      --soft: #F4E8EA;
-      --card: #241C21;
-      --muted: #D8C4CA;
-      --border: #51323F;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: var(--dark);
-      color: var(--soft);
-      line-height: 1.7;
-    }
-
-    header {
-      background: var(--burgundy);
-      color: var(--soft);
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      border-bottom: 1px solid var(--rose);
-    }
-
-    header h2 {
-      font-size: 22px;
-      color: var(--rose);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    nav a {
-      color: var(--soft);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--rose);
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--burgundy), var(--dark));
-      color: var(--soft);
-      min-height: 480px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 52px;
-      padding: 55px 8%;
-    }
-
-    .hero-text {
-      max-width: 650px;
-    }
-
-    .hero h1 {
-      color: var(--rose);
-      font-size: clamp(34px, 5vw, 48px);
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .hero h3 {
-      font-size: 23px;
-      font-weight: normal;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      font-size: 17px;
-      color: var(--muted);
-    }
-
-    .profile {
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 30%;
-      border: 6px solid var(--rose);
-      flex-shrink: 0;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-block;
-      border-radius: 7px;
-      padding: 11px 18px;
-      text-decoration: none;
-      font-weight: bold;
-      border: 2px solid var(--rose);
-      transition: 0.3s;
-    }
-
-    .btn-primary {
-      background: var(--rose);
-      color: var(--dark);
-    }
-
-    .btn-outline {
-      color: var(--soft);
-      background: transparent;
-    }
-
-    .btn:hover {
-      background: var(--soft);
-      color: var(--burgundy);
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 55px 8%;
-    }
-
-    section h2 {
-      color: var(--rose);
-      margin-bottom: 20px;
-      font-size: 30px;
- S   }
-
-    .intro {
-      max-width: 900px;
-      color: var(--muted);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      color: var(--soft);
-      padding: 23px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-      transition: transform 0.3s, border-color 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--rose);
-    }
-
-    .card h3 {
-      color: var(--rose);
-      margin-bottom: 9px;
-    }
-
-    .card p {
-      margin-bottom: 8px;
-      color: var(--muted);
-    }
-
-    .card ul {
-      padding-left: 22px;
-      margin: 10px 0;
-      color: var(--muted);
-    }
-
-    .card a {
-      color: var(--rose);
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .card a:hover {
-      color: var(--soft);
-      text-decoration: underline;
-    }
-
-    .tag {
-      display: inline-block;
-      background: var(--burgundy);
-      color: var(--soft);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 12px;
-      border: 1px solid var(--rose);
-    }
-
-    .contact {
-      background: #241820;
-      border-top: 1px solid var(--border);
-    }
-
-    .contact p {
-      color: var(--muted);
-    }
-
-    .contact a {
-      color: var(--rose);
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      color: var(--soft);
-      text-decoration: underline;
-    }
-
-    footer {
-      background: var(--burgundy);
-      color: var(--soft);
-      text-align: center;
-      padding: 22px;
-      border-top: 1px solid var(--rose);
-    }
-
-    a:focus-visible {
-      outline: 2px solid var(--rose);
-      outline-offset: 4px;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background: #f4f7fb; color: #222; line-height: 1.7; }
+    header { background: #0b3d91; color: white; padding: 18px 8%; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    header h2 { font-size: 22px; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .hero { background: linear-gradient(135deg, #0b3d91, #1976d2); color: white; min-height: 480px; display: flex; justify-content: center; align-items: center; gap: 52px; padding: 55px 8%; }
+    .hero-text { max-width: 650px; }
+    .hero h1 { font-size: clamp(34px, 5vw, 48px); line-height: 1.2; margin-bottom: 14px; }
+    .hero h3 { font-size: 23px; font-weight: normal; margin-bottom: 18px; }
+    .hero p { font-size: 17px; }
+    .profile { width: 230px; height: 230px; border-radius: 50%; object-fit: cover; object-position: center 30%; border: 6px solid white; flex-shrink: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .btn { display: inline-block; border-radius: 7px; padding: 11px 18px; text-decoration: none; font-weight: bold; border: 2px solid white; }
+    .btn-primary { background: white; color: #0b3d91; }
+    .btn-outline { color: white; }
+    .btn:hover { transform: translateY(-1px); }
+    section { padding: 55px 8%; }
+    section h2 { color: #0b3d91; margin-bottom: 20px; font-size: 30px; }
+    .intro { max-width: 900px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 23px; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,.08); }
+    .card h3 { color: #1976d2; margin-bottom: 9px; }
+    .tag { display: inline-block; background: #eaf2ff; color: #0b3d91; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: bold; margin-bottom: 10px; }
+    .contact { background: #eaf2ff; }
+    .contact a { color: #0b3d91; }
+    footer { background: #0b3d91; color: white; text-align: center; padding: 22px; }
     @media (max-width: 760px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 28px;
-      }
-
-      .profile {
-        width: 200px;
-        height: 200px;
-      }
-
-      .actions {
-        justify-content: center;
-      }
-
-      nav {
-        gap: 12px;
-      }
+      header { flex-direction: column; align-items: flex-start; }
+      .hero { flex-direction: column-reverse; text-align: center; gap: 28px; }
+      .profile { width: 200px; height: 200px; }
+      .actions { justify-content: center; }
+      nav { gap: 12px; }
     }
-    /* EMERALD GREEN & CREAM THEME */
-
-body {
-    background-color: #F5F0E1;
-    color: #26352D;
-}
-
-header, nav {
-    background-color: #064E3B;
-    color: #F5F0E1;
-}
-
-header a, nav a {
-    color: #F5F0E1;
-}
-
-a {
-    color: #087443;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-a:hover {
-    color: #064E3B;
-    text-decoration-thickness: 2px;
-}
-
-.project-card, .card, .course-card {
-    background-color: #DCE9DF;
-    border: 1px solid #B5C9B8;
-}
-
-button, .btn, .download-btn {
-    background-color: #064E3B;
-    color: #F5F0E1;
-    border: none;
-}
-
-footer {
-    background-color: #064E3B;
-    color: #F5F0E1;
-}
   </style>
 </head>
-
 <body>
+  <header>
+    <h2>Olando Redmutta</h2>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills & Interests</a>
+      <a href="#training">Training</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="#projects">My Projects</a>
+    </nav>
+  </header>
 
-<header>
-  <h2>Olando Redmutta</h2>
-
-  <nav aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="#skills">Skills & Interests</a>
-    <a href="#training">Training</a>
-    <a href="#education">Education</a>
-    <a href="#projects">My Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Hello, I'm Olando Redmutta</h1>
-      <h3>BSc Information Technology Student</h3>
-
-      <p>
-        I'm a second-year Information Technology student at Kirinyaga University,
-        building my skills in data analysis, computer networking, programming
-        and web development. I enjoy learning how technology and data can be
-        used to understand problems and develop useful solutions.
-      </p>
-
-      <div class="actions">
-        <a class="btn btn-primary" href="Olando_Redmutta_CV.docx" download>
-          Download My CV
-        </a>
-
-        <a class="btn btn-outline" href="#contact">
-          Contact Me
-        </a>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hello, I'm Olando Redmutta</h1>
+        <h3>BSc Information Technology Student</h3>
+        <p>I'm a second-year Information Technology student at Kirinyaga University, building my skills in data analysis, computer networking, programming and web development. I enjoy learning how technology and data can be used to understand problems and develop useful solutions.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="Olando_Redmutta_CV.docx" download>Download My CV</a>
+          <a class="btn btn-outline" href="#contact">Contact Me</a>
+        </div>
       </div>
-    </div>
+      <img src="profile.jpg" alt="Olando Redmutta wearing a blue blazer" class="profile">
+    </section>
 
-    <img src="profile.jpg"
-         alt="Olando Redmutta wearing a blue blazer"
-         class="profile">
-  </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="intro">I am an enthusiastic Information Technology student at Kirinyaga University. My main career interest is data analysis, with additional interests in computer networking, programming and web development. I am continuing to build practical skills and look forward to applying what I learn to real-world challenges.</p>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
+    <section id="skills">
+      <h2>Skills & Career Interests</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Data Analysis</h3>
+          <p>Developing skills in data entry, descriptive statistics, frequency tables, graphs, correlation, chi-square testing, statistical modelling and interpretation.</p>
+        </article>
+        <article class="card">
+          <h3>Computer Networking</h3>
+          <p>Learning TCP/IP, subnetting, network configuration, network fundamentals and troubleshooting.</p>
+        </article>
+        <article class="card">
+          <h3>Programming</h3>
+          <p>Building programming knowledge and learning how software solutions are designed and developed.</p>
+        </article>
+        <article class="card">
+          <h3>Web Development</h3>
+          <p>Practising HTML and CSS to build and improve useful, responsive websites.</p>
+        </article>
+        <article class="card">
+          <h3>IT Support</h3>
+          <p>Interested in computer systems, troubleshooting and helping users solve technology problems.</p>
+        </article>
+      </div>
+    </section>
 
-    <p class="intro">
-      I am an enthusiastic Information Technology student at Kirinyaga University.
-      My main career interest is data analysis, with additional interests in
-      computer networking, programming and web development. I am continuing
-      to build practical skills and look forward to applying what I learn
-      to real-world challenges.
-    </p>
-  </section>
+    <section id="training">
+      <h2>Professional Training</h2>
+      <div class="card">
+        <h3>Data Analysis Short Course</h3>
+<p><strong>KESAP Research Center</strong></p>
+<p><strong>Status:</strong> Completed</p>
+<p><strong>Recognition:</strong> Certificate of Merit in Statistical Package for Social Sciences (SPSS) and STATA.</p>
 
-  <section id="skills">
-    <h2>Skills & Career Interests</h2>
+<p>Training in data entry, statistical analysis, statistical modelling and data interpretation using Microsoft Excel, SPSS and Stata.</p>
 
-    <div class="cards">
+<p><strong>Key Training Areas:</strong></p>
+<ul>
+  <li>Primary and secondary data entry</li>
+  <li>Descriptive statistics, including mean, standard deviation and frequency tables</li>
+  <li>Creating graphs and presenting data clearly</li>
+  <li>Relationship testing using correlation and chi-square</li>
+  <li>Model estimation and interpretation</li>
+  <li>Diagnostic tests for autocorrelation, multicollinearity and heteroscedasticity</li>
+  <li>Interpreting results and drawing meaningful concl
+    usions</li>
+</ul>
+<p>
+  <a href="spss-stata-certificate.jpg"
+  target="blank" rel="noopener noreferrer">
+  view certificate
+  </a>
+</p>
+      </div>
+    </section>
 
-      <article class="card">
-        <h3>Data Analysis</h3>
-        <p>
-          Developing skills in data entry, descriptive statistics, frequency
-          tables, graphs, correlation, chi-square testing, statistical
-          modelling and interpretation.
-        </p>
-      </article>
+    <section id="education">
+      <h2>Education & Leadership</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Kirinyaga University</h3>
+          <p><strong>BSc Information Technology</strong></p>
+          <p>Second-year student · Currently studying</p>
+        </article>
+        <article class="card">
+          <h3>Leadership Experience</h3>
+          <p>Served as a class prefect in primary school and as an editor in high school.</p>
+        </article>
+        <article class="card">
+          <h3>Activities</h3>
+          <p>Played netball in school, developing teamwork and cooperation.</p>
+        </article>
+      </div>
+    </section>
 
-      <article class="card">
-        <h3>Computer Networking</h3>
-        <p>
-          Learning TCP/IP, subnetting, network configuration,
-          network fundamentals and troubleshooting.
-        </p>
-      </article>
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <strong><a href="mailto:olandoredmutta@gmail.com">olandoredmutta@gmail.com</a></strong></p>
+      <p>For my background and experience, you can also view or download my CV using the button above.</p>
+    </section>
+  </main>
 
-      <article class="card">
-        <h3>Programming</h3>
-        <p>
-          Building programming knowledge and learning how software
-          solutions are designed and developed.
-        </p>
-      </article>
+  <footer>
+    <p>© 2026 Olando Redmutta | IT Portfolio</p>
+  </footer>
+<section id="projects" style="padding: 40px 20px; text-align: center;">
+  <h2>My Projects</h2>
+  <p>Here are some of the projects I have worked on as a BScIT student.</p>
 
-      <article class="card">
-        <h3>Web Development</h3>
-        <p>
-          Practising HTML and CSS to build and improve useful,
-          responsive websites.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>IT Support</h3>
-        <p>
-          Interested in computer systems, troubleshooting and
-          helping users solve technology problems.
-        </p>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="training">
-    <h2>Professional Training</h2>
-
-    <div class="card">
-
-      <span class="tag">Completed · October 2026</span>
-
-      <h3>Data Analysis Short Course</h3>
-
-      <p><strong>KESAP Research Centre</strong></p>
-
-      <p><strong>Status:</strong> Completed</p>
-
-      <p>
-        <strong>Recognition:</strong> Certificate of Merit in
-        Statistical Package for Social Sciences (SPSS) and STATA.
-      </p>
-
-      <p>
-        Training in data entry, statistical analysis, statistical modelling
-        and data interpretation using Microsoft Excel, SPSS and Stata.
-      </p>
-
-      <p><strong>Key Training Areas:</strong></p>
-
-      <ul>
-        <li>Primary and secondary data entry</li>
-        <li>Descriptive statistics, including mean, standard deviation and frequency tables</li>
-        <li>Creating graphs and presenting data clearly</li>
-        <li>Relationship testing using correlation and chi-square</li>
-        <li>Model estimation and interpretation</li>
-        <li>Diagnostic tests for autocorrelation, multicollinearity and heteroscedasticity</li>
-        <li>Interpreting results and drawing meaningful conclusions</li>
-      </ul>
-
-      <p>
-        <a href="spss-stata-certificate.jpg"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Certificate
-        </a>
-      </p>
-
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education & Leadership</h2>
-
-    <div class="cards">
-
-      <article class="card">
-        <h3>Kirinyaga University</h3>
-        <p><strong>BSc Information Technology</strong></p>
-        <p>Second-year student · Currently studying</p>
-      </article>
-
-      <article class="card">
-        <h3>Leadership Experience</h3>
-        <p>
-          Served as a class prefect in primary school
-          and as an editor in high school.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Activities</h3>
-        <p>
-          Played netball in school, developing teamwork
-          and cooperation.
-        </p>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <p class="intro">
-      Here are some of the projects I have worked on as a BScIT student.
-    </p>
-
-    <div class="cards" style="margin-top: 20px;">
-
-      <article class="card">
-        <h3>Number System Converter</h3>
-
-        <p>
-          A Flutter and Dart application for converting numbers
-          between Binary, Decimal, Octal, and Hexadecimal.
-        </p>
-
-        <a href="https://olandoredmutta-ui.github.io/NumberSystemConverter/"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Number Converter
-        </a>
-      </article>
-
-      <article class="card">
-        <h3>Web Development Assignment</h3>
-
-        <p>
-          A responsive website featuring a registration form,
-          form validation, member registration, member removal,
-          and Dark Mode.
-        </p>
-
-        <a href="https://github.com/olandoredmutta-ui/webdev"
-           target="_blank"
-           rel="noopener noreferrer">
-          View Source Code
-        </a>
-      </article>
-
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-
-    <p>
-      Email:
-      <strong>
-        <a href="mailto:olandoredmutta@gmail.com">
-          olandoredmutta@gmail.com
-        </a>
-      </strong>
-    </p>
-
-    <p>
-      For my background and experience, you can also view
-      or download my CV using the button above.
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  <p>© 2026 Olando Redmutta | IT Portfolio</p>
-</footer>
-
+ <div style="margin: 20px auto; max-width: 500px; padding: 20px; border: 1px solid #ccc; border-radius: 10px;">
+    <h3>Number System Converter</h3>
+    <p>A Flutter and Dart application for converting numbers between Binary, Decimal, Octal, and Hexadecimal.</p>
+    <a href="https://olandoredmutta-ui.github.io/NumberSystemConverter/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display: inline-block; padding: 12px 20px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px;">
+      View Number Converter
+    </a>
+  </div>
+<div style="margin: 20px auto; max-width: 500px; padding: 20px; border: 1px solid #ccc; border-radius: 10px;">
+    <h3>Web Development Assignment</h3>
+    <p>A responsive website featuring a registration form, form validation, member registration, member removal, and Dark Mode.</p>
+    <a href="https://github.com/olandoredmutta-ui/webdev"
+       target="_blank"
+       rel="noopener noreferrer">
+       View Source Code
+</a>
+</div>
+</section>
 </body>
 </html>
