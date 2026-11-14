@@ -4,31 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Olando Redmutta's Information Technology portfolio, training, interests and contact details.">
+  <meta name="theme-color" content="#171316">
   <title>Olando Redmutta | IT Portfolio</title>
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: Arial, sans-serif; background: #f4f7fb; color: #222; line-height: 1.7; }
+    :root {
+      --burgundy: #4A1028;
+      --dark: #171316;
+      --rose: #B76E79;
+      --soft: #F4E8EA;
+      --card: #241C21;
+      --muted: #D8C4CA;
+      --border: #51323F;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--dark);
+      color: var(--soft);
+      line-height: 1.7;
+    }
 
     header {
-      background: #0b3d91;
-      color: white;
+      background: var(--burgundy);
+      color: var(--soft);
       padding: 18px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 18px;
+      border-bottom: 1px solid var(--rose);
     }
 
-    header h2 { font-size: 22px; }
-    nav { display: flex; flex-wrap: wrap; gap: 16px; }
-    nav a { color: white; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
+    header h2 {
+      font-size: 22px;
+      color: var(--rose);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: var(--soft);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--rose);
+    }
 
     .hero {
-      background: linear-gradient(135deg, #0b3d91, #1976d2);
-      color: white;
+      background: linear-gradient(135deg, var(--burgundy), var(--dark));
+      color: var(--soft);
       min-height: 480px;
       display: flex;
       justify-content: center;
@@ -37,10 +78,27 @@
       padding: 55px 8%;
     }
 
-    .hero-text { max-width: 650px; }
-    .hero h1 { font-size: clamp(34px, 5vw, 48px); line-height: 1.2; margin-bottom: 14px; }
-    .hero h3 { font-size: 23px; font-weight: normal; margin-bottom: 18px; }
-    .hero p { font-size: 17px; }
+    .hero-text {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      color: var(--rose);
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero h3 {
+      font-size: 23px;
+      font-weight: normal;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: var(--muted);
+    }
 
     .profile {
       width: 230px;
@@ -48,19 +106,57 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: center 30%;
-      border: 6px solid white;
+      border: 6px solid var(--rose);
       flex-shrink: 0;
     }
 
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-    .btn { display: inline-block; border-radius: 7px; padding: 11px 18px; text-decoration: none; font-weight: bold; border: 2px solid white; }
-    .btn-primary { background: white; color: #0b3d91; }
-    .btn-outline { color: white; }
-    .btn:hover { transform: translateY(-1px); }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
 
-    section { padding: 55px 8%; }
-    section h2 { color: #0b3d91; margin-bottom: 20px; font-size: 30px; }
-    .intro { max-width: 900px; }
+    .btn {
+      display: inline-block;
+      border-radius: 7px;
+      padding: 11px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid var(--rose);
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--rose);
+      color: var(--dark);
+    }
+
+    .btn-outline {
+      color: var(--soft);
+      background: transparent;
+    }
+
+    .btn:hover {
+      background: var(--soft);
+      color: var(--burgundy);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 55px 8%;
+    }
+
+    section h2 {
+      color: var(--rose);
+      margin-bottom: 20px;
+      font-size: 30px;
+ S   }
+
+    .intro {
+      max-width: 900px;
+      color: var(--muted);
+    }
 
     .cards {
       display: grid;
@@ -69,45 +165,115 @@
     }
 
     .card {
-      background: white;
+      background: var(--card);
+      color: var(--soft);
       padding: 23px;
       border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      transition: transform 0.3s, border-color 0.3s;
     }
 
-    .card h3 { color: #1976d2; margin-bottom: 9px; }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--rose);
+    }
+
+    .card h3 {
+      color: var(--rose);
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 22px;
+      margin: 10px 0;
+      color: var(--muted);
+    }
+
+    .card a {
+      color: var(--rose);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      color: var(--soft);
+      text-decoration: underline;
+    }
 
     .tag {
       display: inline-block;
-      background: #eaf2ff;
-      color: #0b3d91;
-      padding: 3px 10px;
+      background: var(--burgundy);
+      color: var(--soft);
+      padding: 4px 12px;
       border-radius: 20px;
       font-size: 13px;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      border: 1px solid var(--rose);
     }
 
-    .card ul { padding-left: 22px; margin: 10px 0; }
-    .card p { margin-bottom: 8px; }
-    .card a { color: #0b3d91; font-weight: bold; }
+    .contact {
+      background: #241820;
+      border-top: 1px solid var(--border);
+    }
 
-    .contact { background: #eaf2ff; }
-    .contact a { color: #0b3d91; }
+    .contact p {
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--rose);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: var(--soft);
+      text-decoration: underline;
+    }
 
     footer {
-      background: #0b3d91;
-      color: white;
+      background: var(--burgundy);
+      color: var(--soft);
       text-align: center;
       padding: 22px;
+      border-top: 1px solid var(--rose);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--rose);
+      outline-offset: 4px;
     }
 
     @media (max-width: 760px) {
-      header { flex-direction: column; align-items: flex-start; }
-      .hero { flex-direction: column-reverse; text-align: center; gap: 28px; }
-      .profile { width: 200px; height: 200px; }
-      .actions { justify-content: center; }
-      nav { gap: 12px; }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 28px;
+      }
+
+      .profile {
+        width: 200px;
+        height: 200px;
+      }
+
+      .actions {
+        justify-content: center;
+      }
+
+      nav {
+        gap: 12px;
+      }
     }
   </style>
 </head>
@@ -116,6 +282,7 @@
 
 <header>
   <h2>Olando Redmutta</h2>
+
   <nav aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#skills">Skills & Interests</a>
@@ -132,6 +299,7 @@
     <div class="hero-text">
       <h1>Hello, I'm Olando Redmutta</h1>
       <h3>BSc Information Technology Student</h3>
+
       <p>
         I'm a second-year Information Technology student at Kirinyaga University,
         building my skills in data analysis, computer networking, programming
@@ -143,7 +311,10 @@
         <a class="btn btn-primary" href="Olando_Redmutta_CV.docx" download>
           Download My CV
         </a>
-        <a class="btn btn-outline" href="#contact">Contact Me</a>
+
+        <a class="btn btn-outline" href="#contact">
+          Contact Me
+        </a>
       </div>
     </div>
 
@@ -154,6 +325,7 @@
 
   <section id="about">
     <h2>About Me</h2>
+
     <p class="intro">
       I am an enthusiastic Information Technology student at Kirinyaga University.
       My main career interest is data analysis, with additional interests in
@@ -167,6 +339,7 @@
     <h2>Skills & Career Interests</h2>
 
     <div class="cards">
+
       <article class="card">
         <h3>Data Analysis</h3>
         <p>
@@ -207,6 +380,7 @@
           helping users solve technology problems.
         </p>
       </article>
+
     </div>
   </section>
 
@@ -214,6 +388,7 @@
     <h2>Professional Training</h2>
 
     <div class="card">
+
       <span class="tag">Completed · October 2026</span>
 
       <h3>Data Analysis Short Course</h3>
@@ -245,12 +420,13 @@
       </ul>
 
       <p>
-        <a href="spss-stata-certificate.jpg"
+        <a href="spss-stata-certificate . jpg"
            target="_blank"
            rel="noopener noreferrer">
           View Certificate
         </a>
       </p>
+
     </div>
   </section>
 
@@ -258,6 +434,7 @@
     <h2>Education & Leadership</h2>
 
     <div class="cards">
+
       <article class="card">
         <h3>Kirinyaga University</h3>
         <p><strong>BSc Information Technology</strong></p>
@@ -279,21 +456,27 @@
           and cooperation.
         </p>
       </article>
+
     </div>
   </section>
 
   <section id="projects">
     <h2>My Projects</h2>
-    <p>Here are some of the projects I have worked on as a BScIT student.</p>
+
+    <p class="intro">
+      Here are some of the projects I have worked on as a BScIT student.
+    </p>
 
     <div class="cards" style="margin-top: 20px;">
 
       <article class="card">
         <h3>Number System Converter</h3>
+
         <p>
           A Flutter and Dart application for converting numbers
           between Binary, Decimal, Octal, and Hexadecimal.
         </p>
+
         <a href="https://olandoredmutta-ui.github.io/NumberSystemConverter/"
            target="_blank"
            rel="noopener noreferrer">
@@ -303,11 +486,13 @@
 
       <article class="card">
         <h3>Web Development Assignment</h3>
+
         <p>
           A responsive website featuring a registration form,
           form validation, member registration, member removal,
           and Dark Mode.
         </p>
+
         <a href="https://github.com/olandoredmutta-ui/webdev"
            target="_blank"
            rel="noopener noreferrer">
